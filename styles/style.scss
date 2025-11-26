@@ -1,0 +1,115 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+@import './homepageUp.scss';
+@import './splash.scss';
+@import './header.scss';
+@import './experience.scss';
+@import './services.scss';
+@import './paginator.scss';
+
+.team{
+ padding: 30px;
+ @include mixins.flex(flex-start,space-between,30px);
+
+ &__workerCard{
+  @include mixins.flex(flex-start,space-between,0px);
+  background: vars.$greyColor_bgAlt;
+  border-radius: 12px;
+ }
+
+ &__workerCard--img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+ }
+ & .linkWithArrow{
+  @include mixins.flex(flex-start,flex-start, 2px, row);
+  align-items: center;
+  margin-bottom: 5px;
+ }
+ & .linkWithArrow--caps{
+  @include mixins_fonts.regulationFont(14px, 700, vars.$activeColor_regular);
+ }
+ &__workerCard__workerInfo{
+  @include mixins.flex(flex-start,flex-start, 30px);
+  padding: 30px;
+ }
+ & .text{
+  @include mixins_fonts.regulationFont(30px, 700);
+  background: vars.$gradient_redtext;  
+  -webkit-background-clip: text;
+  color: transparent;
+ }
+ & .workerInfo__name{
+  @include mixins_fonts.regulationFont(16px, 700, vars.$greyColor_text);
+  margin-bottom: 5px;
+ }
+ & .workerInfo__jobposition{
+  @include mixins_fonts.regulationFont(14px, 400, vars.$greyColor_text);
+ }
+}
+
+.clients{
+ @include mixins.flex(flex-start,flex-start,30px);
+ width: 100%;
+
+ & > h3{
+  @include mixins_fonts.regulationFont(14px, 700, vars.$mainColor);
+  align-self: center;
+ }
+ &__logoArea{
+  @include mixins.flex(center,center);
+ }
+
+ &__logo{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ &__logo--bigBoy{
+  display: none;
+ }
+ .hl{
+  background-color: vars.$hl;
+ }
+ .wb{
+  background-color: vars.$wb;
+ }
+ .tp{
+  background-color: vars.$tp;
+ }
+ .threed{
+  background-color: vars.$threed;
+ }
+ .orange{
+  background-color: vars.$orange;
+ }
+ .ad{
+  background-color: vars.$ad;
+ }
+ .click{
+  background-color: vars.$click;
+ }
+ .eco{
+  background-color: vars.$eco;
+ }
+ .infra{
+  background-color: vars.$infra;
+ }
+ .city{
+  background-color: vars.$city;
+ }
+ .art{
+  background-color: vars.$art;
+ }
+ .ult{
+  background-color: vars.$ult;
+ }
+}
+
+

@@ -1,0 +1,39 @@
+.services{
+ padding: 0 30px;
+ @include mixins.flex(flex-start,flex-start,30px);
+
+ &__beginInfo{
+  @include mixins.flex(flex-start,flex-start,10px);
+ }
+ & .linkWithArrow{
+  @include mixins.flex(flex-start,flex-start, 2px, row);
+  align-items: center;
+ }
+ & .linkWithArrow--caps{
+  @include mixins_fonts.regulationFont(14px, 700, vars.$activeColor_regular);
+ }
+ &__beginInfo > h1{
+  @include mixins_fonts.regulationFont(30px, 700, vars.$activeColor_regular);
+  background: vars.$gradient_redtext;  
+  -webkit-background-clip: text;
+  color: transparent;
+ }
+
+ &__cards{
+  @include mixins.flex(flex-start,flex-start,30px);
+ }
+ &__card{
+  @include mixins.flex(flex-start,flex-start,15px);
+  align-items: flex-start;
+ }
+ &__card .icons_area{
+  padding: 14px;
+  border-radius: 24px;
+ }
+ &__card .activeColor_regular{
+  @include mixins_fonts.regulationFont(22px, 700, vars.$activeColor_regular);
+ }
+ &__card p{
+  @include mixins_fonts.regulationFont(16px, 400);
+ }
+}

@@ -1,0 +1,75 @@
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: start;
+  justify-content: start;
+  gap: 0px;
+  width: 100%;
+}
+header > .contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  gap: 0px;
+  padding: 10px 15px;
+  width: 100%;
+  background: rgba(245, 245, 250, 0.2);
+}
+header .lnges__btn {
+  padding: 5px 7px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+header .lnges__btn--active {
+  background: #F0145A;
+}
+header .contacts__contact {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+header > .pinned {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  gap: 0px;
+  padding: 15px 15px;
+  width: 100%;
+}
+header .pinned__logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+header .pinned__logo__assets {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 3px;
+  width: 69.333px;
+  height: 32px;
+  flex-direction: column;
+}
+header .pinned__logo__info {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+header .pinned__button {
+  background: transparent;
+  border: none;
+}/*# sourceMappingURL=header.css.map */

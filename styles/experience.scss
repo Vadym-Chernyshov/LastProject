@@ -1,0 +1,38 @@
+.experience{
+ @include mixins.flex(flex-start,flex-start,30px);
+ &__navigation{
+  padding-right: 30px;
+  width: 100%;                /* не ширше екрана */
+  overflow-x: auto;           /* горизонтальний скрол */
+  overflow-y: hidden;
+ }
+ &__navigation > ul{
+  padding: 0px 30px;
+  @include mixins.flex(flex-start,flex-start,30px,row);
+ }
+ &__navigation__element{
+  @include mixins_fonts.regulationFont(30px, 700, vars.$greyColor_text);
+  white-space: nowrap;
+ }
+ &__navigation__element--active{
+  background: vars.$gradient_redtext;  
+  -webkit-background-clip: text;
+  color: transparent;
+ }
+ &__line{
+  width: calc(100% - 60px);
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 0 auto; /* по центру */
+ }
+ & > h2{
+  padding: 0 30px;
+  @include mixins_fonts.regulationFont(20px, 700);
+ }
+  & > p{
+  padding: 0 30px;
+  @include mixins_fonts.regulationFont(19px, 400);
+  line-height: 30px;
+ }
+}

@@ -1,0 +1,14 @@
+.paginator{
+ @include mixins.flex(center,center,15px, row);
+ align-items: center;
+ &__dot{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: vars.$activeColor_regular;
+  opacity: 0.2;
+ }
+ &__dot--active{
+  opacity: 1;
+ }
+}

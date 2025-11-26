@@ -1,10 +1,12 @@
 @use 'vars';
-
-@mixin HeroFont(){
+@mixin regulationFont($fontSize,$fontWeight, $fontColor: #fff){
+    color: $fontColor;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+@mixin H1Font(){
     /* Hero / Regular */
-    font-family: Montserrat;
     font-size: 38px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
     background: $gradient_redtext;
@@ -14,25 +16,19 @@
 }
 @mixin H2Font(){
     color: $mainColor;
-    font-family: Montserrat;
     font-size: 30px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 @mixin H3Font(){
     color: $mainColor;
-    font-family: Montserrat;
     font-size: 22px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 @mixin H3Font_Caps(){
     color: $mainColor;
-    font-family: Montserrat;
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
@@ -40,41 +36,31 @@
 }
 @mixin H4Font(){
     color: $mainColor;
-    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 @mixin paragraphFont(){
     color: #000;
-    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 162.5% */
 }
 @mixin listFont(){
     color: #000;
-    font-family: Montserrat;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 144.444% */
 }
 @mixin linkRegularFont(){
     color: $activeColor_regular;
-    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 125% */
 }
 @mixin linkHoverFont(){
     color: $accentColor;
-    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 125% */
 }

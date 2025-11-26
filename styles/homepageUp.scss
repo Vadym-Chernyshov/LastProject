@@ -1,0 +1,24 @@
+.homepageUp{
+ @include mixins.flex(start,start,0px);
+
+ &__content{
+  @include mixins.flex(start,start,30px);
+  padding-bottom: 60px;
+  border-radius: 0 0 12px 12px;
+  background: vars.$gradient_supersoft;
+ }
+ &__shadow > .line1{
+  width: calc(100% - 30px);
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background: #CACADB;
+  margin: 0 auto; /* по центру */
+ }
+  &__shadow > .line2{
+  width: calc(100% - 40px);
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background: #E7E7F2;
+  margin: 0 auto; /* по центру */
+ }
+}

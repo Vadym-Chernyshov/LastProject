@@ -1,0 +1,49 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+header{
+ @include mixins.flex(start,start,0px);
+ width: 100%;
+ &>.contacts{
+  @include mixins.flex(center,space-between,0px, row);
+  padding: 10px 15px;
+  width: 100%;
+  background: vars.$shadow;
+ }
+ & .lnges__btn{
+  padding: 5px 7px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  @include mixins_fonts.regulationFont(12px, 700);
+ }
+ & .lnges__btn--active{
+  background: vars.$accentColor;
+ }
+ & .contacts__contact{
+  @include mixins_fonts.regulationFont(16px, 700);
+ }
+
+ &>.pinned{
+  @include mixins.flex(center,space-between,0px, row);
+  padding: 15px 15px;
+  width: 100%;
+ }
+ & .pinned__logo{
+  @include mixins.flex(flex-start,flex-start, 5px, row);
+ }
+ & .pinned__logo__assets{
+  @include mixins.flex(flex-start,center,3px,);  
+  width: 69.333px;
+  height: 32px;
+  flex-direction: column;
+ }
+ & .pinned__logo__info{
+  @include mixins_fonts.regulationFont(20px, 400);
+ }
+ & .pinned__button{
+  background: transparent;
+  border: none;
+ }
+}

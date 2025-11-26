@@ -1,0 +1,22 @@
+.splash{
+ height: 600px;
+ width: 100%;
+ @include mixins.flex(flex-start,space-between,30px);
+ position: relative;
+ background-image: url(../img/background/h.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+
+ &__arrowDown{
+  width: 42px;
+  height: 42px;
+  display: block;
+  align-self: center;
+ }
+ &__text{
+  padding: 0 30px;
+  text-align: center;
+  @include mixins_fonts.regulationFont(38px, 700);
+ }
+}

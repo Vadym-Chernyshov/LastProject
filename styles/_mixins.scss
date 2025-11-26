@@ -1,0 +1,8 @@
+@mixin flex($ai, $jc, $g: 0px, $fd: column, $fw: nowrap){
+    display: flex;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+    align-content: $ai;
+    justify-content: $jc;
+    gap: $g; 
+}
