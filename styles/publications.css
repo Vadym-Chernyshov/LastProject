@@ -1,0 +1,114 @@
+.publications {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 30px;
+  background-color: #F5F5FA;
+}
+.publications .linkWithArrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.publications .linkWithArrow--caps {
+  color: #24A3FF;
+  font-size: 14px;
+  font-weight: 700;
+}
+.publications > h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.publications__cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.publications__card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 0px;
+  background-color: #FFFFFF;
+}
+.publications__img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.publications__info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.publications__name {
+  color: #24A3FF;
+  font-size: 16px;
+  font-weight: 700;
+}
+.publications__date {
+  color: #B3B3BA;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.publications__line {
+  width: 100%;
+  height: 4px;
+  background-color: #E6E6F0;
+}
+.publications__text {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .publications {
+    padding: 30px 60px;
+  }
+  .publications__cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    grid-gap: 30px;
+  }
+  .publications__cards .card__wide {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .publications__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .publications__cards .card__wide {
+    grid-column: 3;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1920px) {
+  .publications {
+    padding: 30px 160px;
+  }
+}/*# sourceMappingURL=publications.css.map */

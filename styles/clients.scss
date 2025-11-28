@@ -1,0 +1,89 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+.clients{
+ @include mixins.flex(flex-start,flex-start,30px);
+ width: 100%;
+
+ & > h3{
+  @include mixins_fonts.regulationFont(14px, 700, vars.$mainColor);
+  text-transform: uppercase;
+  align-self: center;
+ }
+ &__logoArea{
+  @include mixins.flex(center,center);
+ }
+
+ &__logo{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ &__logo--bigBoy{
+  display: none;
+ }
+ .hl{
+  background-color: vars.$hl;
+ }
+ .wb{
+  background-color: vars.$wb;
+ }
+ .tp{
+  background-color: vars.$tp;
+ }
+ .threed{
+  background-color: vars.$threed;
+ }
+ .orange{
+  background-color: vars.$orange;
+ }
+ .ad{
+  background-color: vars.$ad;
+ }
+ .click{
+  background-color: vars.$click;
+ }
+ .eco{
+  background-color: vars.$eco;
+ }
+ .infra{
+  background-color: vars.$infra;
+ }
+ .city{
+  background-color: vars.$city;
+ }
+ .art{
+  background-color: vars.$art;
+ }
+ .ult{
+  background-color: vars.$ult;
+ }
+
+ @media screen and (min-width:768px){
+   &__logo--bigBoy{
+    display: block;
+   }
+   &__logoArea{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+   } 
+  }
+  @media screen and (min-width:1024px){
+    &__logoArea{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    } 
+  }
+  @media screen and (min-width:1920px){    
+    padding: 0px 100px 60px 100px;
+    width: auto;
+    &__logoArea{
+      border-radius: 12px;
+    }    
+  }
+}

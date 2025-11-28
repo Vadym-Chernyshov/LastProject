@@ -4,8 +4,12 @@
 
 header{
  @include mixins.flex(start,start,0px);
- width: 100%;
- &>.contacts{
+ // width: 100%;
+ box-sizing: border-box;
+ & .bigBoy{
+  display: none;
+ }
+ & > .contacts{
   @include mixins.flex(center,space-between,0px, row);
   padding: 10px 15px;
   width: 100%;
@@ -35,8 +39,6 @@ header{
  }
  & .pinned__logo__assets{
   @include mixins.flex(flex-start,center,3px,);  
-  width: 69.333px;
-  height: 32px;
   flex-direction: column;
  }
  & .pinned__logo__info{
@@ -45,5 +47,73 @@ header{
  & .pinned__button{
   background: transparent;
   border: none;
+ }
+
+ @media screen and (min-width:768px){
+  padding: 50px 60px 0px 60px;
+  gap: 30px;
+  & .bigBoy{
+   display: block;
+  }
+  & .forMobileElement{
+   display: none;
+  }
+  & > .contacts{
+   @include mixins.flex(start,start,6px, row);
+   padding: 0;
+   background: none;
+   align-items: center;
+  }
+  & .address__name{
+   @include mixins_fonts.regulationFont(16px, 400, vars.$greyColor_text);
+  }
+  & > .pinned{
+   padding: 0;
+  }
+  & .pinned__logo__assets {
+   width: 130px;
+   height: 60px;
+  }
+  & .pinned__logo__brand{
+   width: 130px;
+   height: 45px;
+  }
+  & .pinned__logo__brandName{
+   width: 130px;
+   height: 7px;
+  }
+  & .sitenav > ul{
+   @include mixins.flex(flex-start,flex-start,15px,row);
+  }
+  & .sitenav__cat > a{
+   @include mixins_fonts.regulationFont(16px, 700);
+  }
+ }
+ @media screen and (min-width:1024px){
+  position: relative;
+  align-items: flex-end;
+  & > .contacts{
+   justify-content: flex-end;
+  }
+  & > .pinned{
+   display: block;
+   position: absolute;
+   left: 60px;
+   top: 50px;
+   width: 130px;
+   height: 60px;
+  }
+  & .pinned__logo{
+   display: block;
+  }
+  & .sitenav{
+   margin-top: -15px;
+  }  
+ }
+ @media screen and (min-width:1920px){
+  padding: 50px 160px 0px 160px;
+  & > .pinned{
+   left: 160px;
+  }
  }
 }

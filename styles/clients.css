@@ -1,0 +1,96 @@
+.clients {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+.clients > h3 {
+  color: #323264;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-self: center;
+}
+.clients__logoArea {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  gap: 0px;
+}
+.clients__logo {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients__logo--bigBoy {
+  display: none;
+}
+.clients .hl {
+  background-color: #1C4280;
+}
+.clients .wb {
+  background-color: #143646;
+}
+.clients .tp {
+  background-color: #F48B30;
+}
+.clients .threed {
+  background-color: #9E4DC3;
+}
+.clients .orange {
+  background-color: #FD9339;
+}
+.clients .ad {
+  background-color: #E2E2E4;
+}
+.clients .click {
+  background-color: #C71C36;
+}
+.clients .eco {
+  background-color: #DCF3F9;
+}
+.clients .infra {
+  background-color: #EAEAEA;
+}
+.clients .city {
+  background-color: #282240;
+}
+.clients .art {
+  background-color: #1D4568;
+}
+.clients .ult {
+  background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  .clients__logo--bigBoy {
+    display: block;
+  }
+  .clients__logoArea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .clients__logoArea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .clients {
+    padding: 0px 100px 60px 100px;
+    width: auto;
+  }
+  .clients__logoArea {
+    border-radius: 12px;
+  }
+}/*# sourceMappingURL=clients.css.map */

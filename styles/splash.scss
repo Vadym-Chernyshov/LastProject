@@ -1,3 +1,7 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
 .splash{
  height: 600px;
  width: 100%;
@@ -6,7 +10,7 @@
  background-image: url(../img/background/h.svg);
  background-repeat: no-repeat;
  background-position: center;
- background-size: cover;
+ background-size: contain;
 
  &__arrowDown{
   width: 42px;
@@ -18,5 +22,17 @@
   padding: 0 30px;
   text-align: center;
   @include mixins_fonts.regulationFont(38px, 700);
+ }
+ @media screen and (min-width:768px){
+  height: 1024px;
+ }
+  @media screen and (min-width:1024px){
+  height: 768px;
+ }
+ @media screen and (min-width:1440px){
+  height: 800px;
+ }
+ @media screen and (min-width:1920px){
+  height: 1000px;
  }
 }

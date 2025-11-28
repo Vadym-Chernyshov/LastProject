@@ -5,7 +5,10 @@ header {
   align-content: start;
   justify-content: start;
   gap: 0px;
-  width: 100%;
+  box-sizing: border-box;
+}
+header .bigBoy {
+  display: none;
 }
 header > .contacts {
   display: flex;
@@ -60,8 +63,6 @@ header .pinned__logo__assets {
   align-content: flex-start;
   justify-content: center;
   gap: 3px;
-  width: 69.333px;
-  height: 32px;
   flex-direction: column;
 }
 header .pinned__logo__info {
@@ -72,4 +73,91 @@ header .pinned__logo__info {
 header .pinned__button {
   background: transparent;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 50px 60px 0px 60px;
+    gap: 30px;
+  }
+  header .bigBoy {
+    display: block;
+  }
+  header .forMobileElement {
+    display: none;
+  }
+  header > .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: start;
+    justify-content: start;
+    gap: 6px;
+    padding: 0;
+    background: none;
+    align-items: center;
+  }
+  header .address__name {
+    color: #B3B3BA;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  header > .pinned {
+    padding: 0;
+  }
+  header .pinned__logo__assets {
+    width: 130px;
+    height: 60px;
+  }
+  header .pinned__logo__brand {
+    width: 130px;
+    height: 45px;
+  }
+  header .pinned__logo__brandName {
+    width: 130px;
+    height: 7px;
+  }
+  header .sitenav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  header .sitenav__cat > a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    position: relative;
+    align-items: flex-end;
+  }
+  header > .contacts {
+    justify-content: flex-end;
+  }
+  header > .pinned {
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    width: 130px;
+    height: 60px;
+  }
+  header .pinned__logo {
+    display: block;
+  }
+  header .sitenav {
+    margin-top: -15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header {
+    padding: 50px 160px 0px 160px;
+  }
+  header > .pinned {
+    left: 160px;
+  }
 }/*# sourceMappingURL=header.css.map */

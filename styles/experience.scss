@@ -1,38 +1,109 @@
-.experience{
- @include mixins.flex(flex-start,flex-start,30px);
- &__navigation{
-  padding-right: 30px;
-  width: 100%;                /* не ширше екрана */
-  overflow-x: auto;           /* горизонтальний скрол */
-  overflow-y: hidden;
- }
- &__navigation > ul{
-  padding: 0px 30px;
-  @include mixins.flex(flex-start,flex-start,30px,row);
- }
- &__navigation__element{
-  @include mixins_fonts.regulationFont(30px, 700, vars.$greyColor_text);
-  white-space: nowrap;
- }
- &__navigation__element--active{
-  background: vars.$gradient_redtext;  
-  -webkit-background-clip: text;
-  color: transparent;
- }
- &__line{
-  width: calc(100% - 60px);
-  height: 3px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
-  margin: 0 auto; /* по центру */
- }
- & > h2{
-  padding: 0 30px;
-  @include mixins_fonts.regulationFont(20px, 700);
- }
-  & > p{
-  padding: 0 30px;
-  @include mixins_fonts.regulationFont(19px, 400);
-  line-height: 30px;
- }
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+.experience {
+  @include mixins.flex(flex-start, flex-start, 30px);
+
+  &__navigation {
+    padding-right: 30px;
+    width: 100%;
+    /* не ширше екрана */
+    overflow-x: auto;
+    /* горизонтальний скрол */
+    overflow-y: hidden;
+  }
+
+  &__navigation>ul {
+    padding: 0px 30px;
+    @include mixins.flex(flex-start, flex-start, 30px, row);
+  }
+
+  &__navigation__element {
+    @include mixins_fonts.regulationFont(30px, 700, vars.$greyColor_text);
+    white-space: nowrap;
+  }
+
+  &__navigation__element--active {
+    background: vars.$gradient_redtext;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__line {
+    width: calc(100% - 60px);
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    margin: 0 auto;
+    /* по центру */
+  }
+
+  & h2 {
+    padding: 0 30px;
+    @include mixins_fonts.regulationFont(20px, 700);
+  }
+
+  & p {
+    padding: 0 30px;
+    @include mixins_fonts.regulationFont(19px, 400);
+    line-height: 30px;
+  }
+
+  @media screen and (min-width:768px) {
+    &__navigation {
+      padding-right: 60px;
+    }
+
+    &__navigation>ul {
+      padding: 0px 60px;
+    }
+
+    &__line {
+      width: calc(100% - 120px);
+    }
+
+    &>h2 {
+      padding: 0 60px;
+    }
+
+    &>p {
+      padding: 0 60px;
+    }
+  }
+
+  @media screen and (min-width:1024px) {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    &__navigation {
+      overflow-x: visible; // ← прибираємо горизонтальний скрол
+      overflow-y: visible;
+      display: flex;
+      justify-content: flex-end;
+      border-right: 4px solid rgba(255,255,255,0.3);
+    }
+
+    &__navigation  > ul {
+      display: flex;
+      flex-direction: column; // ← вертикально
+      align-items: flex-end;
+      white-space: normal; // ← дозволяємо перенос
+      gap: 30px;
+      padding: 0; // або твої значення
+    }
+
+    &__line{
+      display: none;
+    }
+  }
+  @media screen and (min-width:1440px){
+    padding: 60px 180px;
+    grid-template-columns: 3fr 4fr;
+  }
+  @media screen and (min-width:1920px){
+    padding: 60px 280px;
+    grid-template-columns: 3fr 4fr;
+  }
 }

@@ -8,107 +8,80 @@
 @import './experience.scss';
 @import './services.scss';
 @import './paginator.scss';
+@import './team.scss';
+@import './clients.scss';
+@import './publications.scss';
 
-.team{
- padding: 30px;
- @include mixins.flex(flex-start,space-between,30px);
 
- &__workerCard{
-  @include mixins.flex(flex-start,space-between,0px);
-  background: vars.$greyColor_bgAlt;
-  border-radius: 12px;
- }
-
- &__workerCard--img{
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
- }
- & .linkWithArrow{
-  @include mixins.flex(flex-start,flex-start, 2px, row);
-  align-items: center;
-  margin-bottom: 5px;
- }
- & .linkWithArrow--caps{
-  @include mixins_fonts.regulationFont(14px, 700, vars.$activeColor_regular);
- }
- &__workerCard__workerInfo{
-  @include mixins.flex(flex-start,flex-start, 30px);
-  padding: 30px;
- }
- & .text{
-  @include mixins_fonts.regulationFont(30px, 700);
-  background: vars.$gradient_redtext;  
-  -webkit-background-clip: text;
-  color: transparent;
- }
- & .workerInfo__name{
-  @include mixins_fonts.regulationFont(16px, 700, vars.$greyColor_text);
-  margin-bottom: 5px;
- }
- & .workerInfo__jobposition{
-  @include mixins_fonts.regulationFont(14px, 400, vars.$greyColor_text);
- }
-}
-
-.clients{
+footer{
  @include mixins.flex(flex-start,flex-start,30px);
- width: 100%;
-
- & > h3{
-  @include mixins_fonts.regulationFont(14px, 700, vars.$mainColor);
-  align-self: center;
- }
- &__logoArea{
-  @include mixins.flex(center,center);
- }
-
- &__logo{
-  height: 120px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- }
- &__logo--bigBoy{
+ padding: 30px;
+ align-items: center;
+ background-color: vars.$greyColor_bg;
+ .bigBoy{
   display: none;
  }
- .hl{
-  background-color: vars.$hl;
+
+ & > .topLine{
+  width: 100%;
+  height: 2px;
+  background-color: vars.$greyColor_separator;
  }
- .wb{
-  background-color: vars.$wb;
+
+ & > .info{
+  @include mixins.flex(flex-start,flex-start,20px);
+  align-items: center;
  }
- .tp{
-  background-color: vars.$tp;
+ & .address{
+  @include mixins.flex(flex-start,flex-start,10px);
+  align-items: center;
  }
- .threed{
-  background-color: vars.$threed;
+ & .address__name{
+  @include mixins_fonts.regulationFont(16px, 400, vars.$mainColor);
  }
- .orange{
-  background-color: vars.$orange;
+ & .address > a{
+  @include mixins_fonts.regulationFont(12px, 700, vars.$activeColor_regular);
+  text-transform: uppercase;
  }
- .ad{
-  background-color: vars.$ad;
+ & .contact{
+  @include mixins.flex(flex-start,flex-start,10px);
+  align-items: center;
  }
- .click{
-  background-color: vars.$click;
+ & .contact__phone{
+  @include mixins_fonts.regulationFont(16px, 700, vars.$mainColor_alt);
  }
- .eco{
-  background-color: vars.$eco;
+ & .contact__email{
+  @include mixins_fonts.regulationFont(16px, 700, vars.$activeColor_regular);
  }
- .infra{
-  background-color: vars.$infra;
+ .end{
+  @include mixins_fonts.regulationFont(16px, 400, vars.$greyColor_text);
  }
- .city{
-  background-color: vars.$city;
+ @media screen and (min-width:768px){
+  padding: 30px 60px;
+  .bigBoy{
+   display: block;
+  }
+  & > .info{
+   display: grid;
+   width: 100%;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   gap: 24px;
+  }
+  & .address{
+   @include mixins.flex(flex-start,flex-start,10px, row);
+  }
+  & .contact{
+   grid-row: 2;
+   grid-column: span 2;
+   @include mixins.flex(flex-start,flex-start,10px, row);
+  }
+  .end{
+   justify-self: end;
+  }
  }
- .art{
-  background-color: vars.$art;
- }
- .ult{
-  background-color: vars.$ult;
+ @media screen and (min-width:1920px){
+  padding: 30px 120px;
  }
 }
 
