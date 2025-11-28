@@ -40,7 +40,7 @@
   }
 
   & h2 {
-    padding: 0 30px;
+    padding: 0 30px 30px 0;
     @include mixins_fonts.regulationFont(20px, 700);
   }
 
@@ -63,11 +63,11 @@
       width: calc(100% - 120px);
     }
 
-    &>h2 {
-      padding: 0 60px;
+    & h2 {
+      padding: 0 60px 30px 60px;
     }
 
-    &>p {
+    & p {
       padding: 0 60px;
     }
   }
