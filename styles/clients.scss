@@ -5,6 +5,9 @@
 .clients{
  @include mixins.flex(flex-start,flex-start,30px);
  width: 100%;
+ &--other{
+  padding-top: 30px;
+ }
 
  & > h3{
   @include mixins_fonts.regulationFont(14px, 700, vars.$mainColor);

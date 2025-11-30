@@ -9,6 +9,9 @@ header{
  & .bigBoy{
   display: none;
  }
+ & .pinned__logo__bigSlash{
+  display: none;
+ }
  & > .contacts{
   @include mixins.flex(center,space-between,0px, row);
   padding: 10px 15px;
@@ -74,6 +77,12 @@ header{
    width: 130px;
    height: 60px;
   }
+  & .pinned__logo__bigSlash{
+  display: block;
+ }
+  & .pinned__logo__info{
+   @include mixins_fonts.regulationFont(36px, 400);
+  }
   & .pinned__logo__brand{
    width: 130px;
    height: 45px;
@@ -96,15 +105,15 @@ header{
    justify-content: flex-end;
   }
   & > .pinned{
-   display: block;
    position: absolute;
    left: 60px;
    top: 50px;
-   width: 130px;
+   width: 260px;
    height: 60px;
   }
   & .pinned__logo{
-   display: block;
+   display: flex;
+   align-items: center;
   }
   & .sitenav{
    margin-top: -15px;

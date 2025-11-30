@@ -94,7 +94,7 @@
     grid-gap: 60px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1920px) {
   .services {
     padding: 0 160px;
   }

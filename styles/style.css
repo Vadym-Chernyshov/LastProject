@@ -94,6 +94,9 @@ header {
 header .bigBoy {
   display: none;
 }
+header .pinned__logo__bigSlash {
+  display: none;
+}
 header > .contacts {
   display: flex;
   flex-direction: row;
@@ -192,6 +195,14 @@ header .pinned__button {
     width: 130px;
     height: 60px;
   }
+  header .pinned__logo__bigSlash {
+    display: block;
+  }
+  header .pinned__logo__info {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 400;
+  }
   header .pinned__logo__brand {
     width: 130px;
     height: 45px;
@@ -223,15 +234,15 @@ header .pinned__button {
     justify-content: flex-end;
   }
   header > .pinned {
-    display: block;
     position: absolute;
     left: 60px;
     top: 50px;
-    width: 130px;
+    width: 260px;
     height: 60px;
   }
   header .pinned__logo {
-    display: block;
+    display: flex;
+    align-items: center;
   }
   header .sitenav {
     margin-top: -15px;
@@ -455,7 +466,7 @@ header .pinned__button {
     grid-gap: 60px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1920px) {
   .services {
     padding: 0 160px;
   }
@@ -592,6 +603,9 @@ header .pinned__button {
   justify-content: flex-start;
   gap: 30px;
   width: 100%;
+}
+.clients--other {
+  padding-top: 30px;
 }
 .clients > h3 {
   color: #323264;

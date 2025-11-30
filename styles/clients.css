@@ -7,6 +7,9 @@
   gap: 30px;
   width: 100%;
 }
+.clients--other {
+  padding-top: 30px;
+}
 .clients > h3 {
   color: #323264;
   font-size: 14px;
