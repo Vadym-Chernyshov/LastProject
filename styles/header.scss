@@ -2,126 +2,170 @@
 @use 'vars';
 @use 'mixins';
 
-header{
- @include mixins.flex(start,start,0px);
- // width: 100%;
+header {
+ @include mixins.flex(start, start, 0px);
  box-sizing: border-box;
- & .bigBoy{
+
+ & .bigBoy {
   display: none;
  }
- & .pinned__logo__bigSlash{
+
+ & .pinned__logo__bigSlash {
   display: none;
  }
- & > .contacts{
-  @include mixins.flex(center,space-between,0px, row);
+
+ &>.contacts {
+  @include mixins.flex(center, space-between, 0px, row);
   padding: 10px 15px;
   width: 100%;
   background: vars.$shadow;
  }
- & .lnges__btn{
+
+ & > .contacts__forPublication {
+  background-color: vars.$greyColor_bg;
+ }
+
+
+ & .lnges__btn {
   padding: 5px 7px;
   border-radius: 8px;
   background: transparent;
   border: none;
   @include mixins_fonts.regulationFont(12px, 700);
  }
- & .lnges__btn--active{
+ & .contacts__forPublication .forPublicationHeader{
+  color: vars.$greyColor_text;
+ }
+
+ & .lnges__btn--active {
   background: vars.$accentColor;
  }
- & .contacts__contact{
+
+ & .contacts__contact {
   @include mixins_fonts.regulationFont(16px, 700);
  }
 
- &>.pinned{
-  @include mixins.flex(center,space-between,0px, row);
+ &>.pinned {
+  @include mixins.flex(center, space-between, 0px, row);
   padding: 15px 15px;
   width: 100%;
  }
- & .pinned__logo{
-  @include mixins.flex(flex-start,flex-start, 5px, row);
+
+ & .pinned__logo {
+  @include mixins.flex(flex-start, flex-start, 5px, row);
  }
- & .pinned__logo__assets{
-  @include mixins.flex(flex-start,center,3px,);  
+
+ & .pinned__logo__assets {
+  @include mixins.flex(flex-start, center, 3px, );
   flex-direction: column;
  }
- & .pinned__logo__info{
+
+ & .pinned__logo__info {
   @include mixins_fonts.regulationFont(20px, 400);
  }
- & .pinned__button{
+ & .pinned__logo__info__forPublication{
+  color: vars.$mainColor;
+ }
+
+ & .pinned__button {
   background: transparent;
   border: none;
  }
 
- @media screen and (min-width:768px){
-  padding: 50px 60px 0px 60px;
+ @media screen and (min-width:768px) {
+  padding: 50px 60px 30px 60px;
   gap: 30px;
-  & .bigBoy{
+
+  & .bigBoy {
    display: block;
   }
-  & .forMobileElement{
+
+  & .forMobileElement {
    display: none;
   }
-  & > .contacts{
-   @include mixins.flex(start,start,6px, row);
+
+  &>.contacts {
+   @include mixins.flex(start, start, 6px, row);
    padding: 0;
    background: none;
    align-items: center;
   }
-  & .address__name{
+
+  & .address__name {
    @include mixins_fonts.regulationFont(16px, 400, vars.$greyColor_text);
   }
-  & > .pinned{
+
+  &>.pinned {
    padding: 0;
   }
+
   & .pinned__logo__assets {
    width: 130px;
    height: 60px;
   }
-  & .pinned__logo__bigSlash{
-  display: block;
- }
-  & .pinned__logo__info{
+
+  & .pinned__logo__bigSlash {
+   display: block;
+  }
+
+  & .pinned__logo__info {
    @include mixins_fonts.regulationFont(36px, 400);
   }
-  & .pinned__logo__brand{
+   & .pinned__logo__info__forPublication{
+  color: vars.$mainColor;
+ }
+
+  & .pinned__logo__brand {
    width: 130px;
    height: 45px;
   }
-  & .pinned__logo__brandName{
+
+  & .pinned__logo__brandName {
    width: 130px;
    height: 7px;
   }
-  & .sitenav > ul{
-   @include mixins.flex(flex-start,flex-start,15px,row);
+
+  & .sitenav>ul {
+   @include mixins.flex(flex-start, flex-start, 15px, row);
   }
-  & .sitenav__cat > a{
+   & .sitenav__cat>a.normalLink{
+   color: vars.$activeColor_regular;
+  }
+  & .sitenav__cat>a {
    @include mixins_fonts.regulationFont(16px, 700);
   }
  }
- @media screen and (min-width:1024px){
+
+ @media screen and (min-width:1024px) {
   position: relative;
   align-items: flex-end;
-  & > .contacts{
+
+  &>.contacts {
    justify-content: flex-end;
   }
-  & > .pinned{
+
+  &>.pinned {
    position: absolute;
    left: 60px;
    top: 50px;
-   width: 260px;
+   width: 360px;
    height: 60px;
   }
-  & .pinned__logo{
+
+  & .pinned__logo {
    display: flex;
    align-items: center;
   }
-  & .sitenav{
+
+  & .sitenav {
    margin-top: -15px;
-  }  
+  }
  }
- @media screen and (min-width:1920px){
+
+ @media screen and (min-width:1920px) {
   padding: 50px 160px 0px 160px;
-  & > .pinned{
+
+  &>.pinned {
    left: 160px;
   }
  }

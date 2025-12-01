@@ -24,6 +24,9 @@ header > .contacts {
   width: 100%;
   background: rgba(245, 245, 250, 0.2);
 }
+header > .contacts__forPublication {
+  background-color: #F5F5FA;
+}
 header .lnges__btn {
   padding: 5px 7px;
   border-radius: 8px;
@@ -32,6 +35,9 @@ header .lnges__btn {
   color: #fff;
   font-size: 12px;
   font-weight: 700;
+}
+header .contacts__forPublication .forPublicationHeader {
+  color: #B3B3BA;
 }
 header .lnges__btn--active {
   background: #F0145A;
@@ -73,13 +79,16 @@ header .pinned__logo__info {
   font-size: 20px;
   font-weight: 400;
 }
+header .pinned__logo__info__forPublication {
+  color: #323264;
+}
 header .pinned__button {
   background: transparent;
   border: none;
 }
 @media screen and (min-width: 768px) {
   header {
-    padding: 50px 60px 0px 60px;
+    padding: 50px 60px 30px 60px;
     gap: 30px;
   }
   header .bigBoy {
@@ -119,6 +128,9 @@ header .pinned__button {
     font-size: 36px;
     font-weight: 400;
   }
+  header .pinned__logo__info__forPublication {
+    color: #323264;
+  }
   header .pinned__logo__brand {
     width: 130px;
     height: 45px;
@@ -134,6 +146,9 @@ header .pinned__button {
     align-content: flex-start;
     justify-content: flex-start;
     gap: 15px;
+  }
+  header .sitenav__cat > a.normalLink {
+    color: #24A3FF;
   }
   header .sitenav__cat > a {
     color: #fff;
@@ -153,7 +168,7 @@ header .pinned__button {
     position: absolute;
     left: 60px;
     top: 50px;
-    width: 260px;
+    width: 360px;
     height: 60px;
   }
   header .pinned__logo {

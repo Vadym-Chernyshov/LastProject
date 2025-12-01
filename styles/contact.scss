@@ -1,0 +1,115 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+main {
+ padding: 30px;
+ @include mixins.flex(flex-start, flex-start, 30px);
+
+ & button {
+  padding: 18px 30px;
+  border-radius: 12px;
+  background: vars.$activeColor_regular;
+  box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.50);
+  @include mixins_fonts.regulationFont(16px, 700);
+ }
+}
+
+.contacts {
+ @include mixins.flex(flex-start, flex-start, 30px);
+
+ &__adress {
+  @include mixins_fonts.regulationFont(21px, 400, vars.$mainColor)
+ }
+
+ .greyLine {
+  height: 4px;
+  align-self: stretch;
+  background-color: vars.$greyColor_separator;
+ }
+
+ &__numANDemail {
+  @include mixins.flex(flex-start, flex-start, 15px);
+ }
+
+ &__phoneNumber {
+  @include mixins_fonts.regulationFont(21px, 400, vars.$mainColor_alt)
+ }
+
+ &__email {
+  @include mixins_fonts.regulationFont(21px, 400, vars.$activeColor_regular)
+ }
+
+ &__facebook {
+  @include mixins.flex(flex-start, flex-start, 10px, row);
+ }
+
+ &__facebook>a {
+  @include mixins_fonts.regulationFont(12px, 700, vars.$activeColor_regular);
+ }
+}
+
+.feedback {
+ padding: 30px;
+ @include mixins.flex(flex-start, flex-start, 30px);
+ border-radius: 12px;
+ background-color: vars.$greyColor_bg;
+
+ &>h1 {
+  @include mixins_fonts.regulationFont(30px, 700);
+  background: vars.$gradient_redtext;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+ &__userinfo {
+  @include mixins.flex(flex-start, flex-start, 15px);
+ }
+ &__userdate{
+  @include mixins.flex(flex-start, flex-start, 15px);
+ }
+
+ & input , textarea{
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--Basic-White, #FFF);
+  background: var(--Basic-White, #FFF);
+ }
+
+ &__iputMessage {
+  height: 130px;  
+ }
+
+ & input::placeholder, textarea::placeholder{
+  @include mixins_fonts.regulationFont(16px, 400, vars.$greyColor_text);
+ }
+
+ & h3 {
+  @include mixins_fonts.regulationFont(16px, 700, vars.$greyColor_text);
+ }
+}
+
+
+@media screen and (min-width:768px){
+  main{
+   padding: 60px;
+   gap: 60px;
+  }
+}
+@media screen and (min-width:768px){
+ main{
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width:1440px){
+  main{
+   padding: 60px 180px;
+  }
+}
+@media screen and (min-width:1920px){
+  main{
+   padding: 60px 280px;
+  }
+}

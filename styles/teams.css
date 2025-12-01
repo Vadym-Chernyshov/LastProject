@@ -1,0 +1,92 @@
+.bigTextForTeam {
+  padding: 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.teams {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.teams__card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.teams__card > img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.teams__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+.teams__nameANDjobpos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.teams__nameANDjobpos > h4 {
+  color: #323264;
+  font-size: 16px;
+  font-weight: 700;
+}
+.teams__nameANDjobpos > span {
+  color: #323264;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .bigTextForTeam {
+    padding: 30px 60px;
+  }
+  .teams {
+    padding: 60px;
+    gap: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .teams__card > img {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bigTextForTeam {
+    padding: 30px 180px;
+  }
+  .teams {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .bigTextForTeam {
+    padding: 30px 280px;
+  }
+  .teams {
+    padding: 60px 160px;
+  }
+}/*# sourceMappingURL=teams.css.map */

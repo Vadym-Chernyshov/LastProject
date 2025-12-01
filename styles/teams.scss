@@ -1,0 +1,68 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+.bigTextForTeam{
+ padding: 30px;
+ @include mixins_fonts.regulationFont(30px, 700);
+ background: vars.$gradient_redtext;
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.teams{
+ padding: 30px;
+ @include mixins.flex(flex-start, flex-start, 30px);
+ &__card{
+  @include mixins.flex(flex-start, flex-start, 15px);
+ }
+ &__card > img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+ }
+ &__info{
+  @include mixins.flex(flex-start, space-between, 15px, row);
+ }
+ &__nameANDjobpos{
+  @include mixins.flex(flex-start, flex-start, 5px);
+ }
+ &__nameANDjobpos > h4{
+  @include mixins_fonts.regulationFont(16px, 700, vars.$mainColor);
+ }
+ &__nameANDjobpos > span{
+  @include mixins_fonts.regulationFont(14px, 400, vars.$mainColor);
+ }
+}
+
+@media screen and (min-width:768px){
+ .bigTextForTeam{
+  padding: 30px 60px;
+ }
+ .teams{
+  padding: 60px;
+  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  &__card > img{
+   height: 400px;
+  }
+ }
+}
+@media screen and (min-width:1024px){
+ .bigTextForTeam{
+  padding: 30px 180px;
+ }
+ .teams{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+ }
+}
+@media screen and (min-width:1920px){
+ .bigTextForTeam{
+  padding: 30px 280px;
+ }
+ .teams{
+  padding: 60px 160px;
+ }
+}

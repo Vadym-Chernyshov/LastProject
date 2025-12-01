@@ -8,6 +8,35 @@
   padding: 30px;
   background-color: #F5F5FA;
 }
+.publications__moreBTN {
+  align-self: center;
+  padding: 18px 30px;
+  border-radius: 12px;
+  background: #24A3FF;
+  box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.publications__categories {
+  align-self: center;
+  display: flex;
+  border-radius: 12px;
+  background: #E6E6F0;
+}
+.publications__categories > button {
+  display: flex;
+  padding: 8px 30px 10px 30px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 10px;
+  margin: 2px;
+  background: #E6E6F0;
+}
+.publications__categories > button.active {
+  background-color: #FFFFFF;
+}
 .publications .linkWithArrow {
   display: flex;
   flex-direction: row;
@@ -54,6 +83,7 @@
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 .publications__info {
   padding: 30px;

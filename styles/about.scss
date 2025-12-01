@@ -1,0 +1,192 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
+.upInfo {
+ padding: 30px;
+ @include mixins.flex(flex-start, flex-start, 30px);
+
+ &__info {
+  @include mixins.flex(flex-start, flex-start, 30px);
+ }
+
+ & h1 {
+  @include mixins_fonts.regulationFont(30px, 700);
+  background: vars.$gradient_redtext;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+ & p {
+  @include mixins_fonts.regulationFont(19px, 400, #000);
+ }
+
+ &__more {
+  padding-left: 30px;
+  border-left: 4px solid vars.$greyColor_separator;
+  @include mixins.flex(flex-start, flex-start, 40px);
+ }
+
+ &__card {
+  @include mixins.flex(flex-start, flex-start, 10px);
+ }
+
+ &__cardSVG {
+  @include mixins.flex(flex-start, flex-start, 8px, row);
+  align-items: center;
+ }
+
+ &__cardSVG>h1 {
+  @include mixins_fonts.regulationFont(36px, 700);
+  background: vars.$gradient_redtext;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+}
+
+.coolTeam {
+ height: 115px;
+ background: linear-gradient(265deg, #F01432 0%, #323264 29.69%), url('../img/achievements/a8cddded947e31014076f8d7e05c3375f3997eb7.png') lightgray 50% / cover no-repeat;
+ background-blend-mode: screen, normal;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ &>span {
+  @include mixins_fonts.regulationFont(36px, 700);
+  text-align: center;
+  text-shadow: 0 15px 30px rgba(40, 40, 86, 0.80);
+  text-transform: uppercase;
+  opacity: 0.8;
+ }
+}
+
+.downInfo {
+ padding: 30px;
+ @include mixins.flex(flex-start, flex-start, 30px);
+
+ &>p {
+  @include mixins_fonts.regulationFont(19px, 400, #000);
+ }
+
+ &>h1 {
+  @include mixins_fonts.regulationFont(30px, 700);
+  background: vars.$gradient_redtext;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+}
+
+.achivements {
+ padding: 30px 60px;
+ background-color: vars.$greyColor_bg;
+ @include mixins.flex(flex-start, flex-start, 30px);
+ align-items: center;
+
+ &>span {
+  @include mixins_fonts.regulationFont(14px, 700, vars.$mainColor);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+ }
+
+ &__imges {
+  width: 100%;
+ }
+
+ & .bigBoy {
+  display: none;
+ }
+
+ &__imgArea {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 12px;
+ }
+}
+
+@media screen and (min-width:768px) {
+ .upInfo {
+  padding: 30px 60px;
+ }
+
+ .coolTeam {
+  height: 233px;
+
+  &>span {
+   font-size: 46px;
+   letter-spacing: 63px;
+  }
+ }
+
+ .downInfo {
+  padding: 30px 60px;
+ }
+
+ .achivements {
+  padding: 30px 60px;
+
+  & .bigBoy {
+   display: flex;
+  }
+
+  & .smallBoy {
+   display: none;
+  }
+
+  &__imges {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   gap: 40px;
+  }
+  &__imgArea{
+   height: 110px;
+  }
+ }
+}
+
+@media screen and (min-width:1024px) {
+
+ .upInfo,
+ .downInfo {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 60px;
+ }
+ .coolTeam {
+  height: 312px;
+  &>span {
+   font-size: 86px;
+  }
+ }
+}
+
+@media screen and (min-width:1440px) {
+
+ .upInfo,
+ .downInfo {
+  padding: 30px 180px;
+ }
+ .coolTeam {
+  height: 438px;
+  &>span {
+   font-size: 96px;
+  }
+ }
+}
+@media screen and (min-width:1920px) {
+
+ .upInfo,
+ .downInfo {
+  padding: 30px 280px;
+ }
+ .coolTeam {
+  height: 584px;
+ }
+}

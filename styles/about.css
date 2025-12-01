@@ -1,0 +1,210 @@
+.upInfo {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.upInfo__info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.upInfo h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.upInfo p {
+  color: #000;
+  font-size: 19px;
+  font-weight: 400;
+}
+.upInfo__more {
+  padding-left: 30px;
+  border-left: 4px solid #E6E6F0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.upInfo__card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.upInfo__cardSVG {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+.upInfo__cardSVG > h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coolTeam {
+  height: 115px;
+  background: linear-gradient(265deg, #F01432 0%, #323264 29.69%), url("../img/achievements/a8cddded947e31014076f8d7e05c3375f3997eb7.png") lightgray 50%/cover no-repeat;
+  background-blend-mode: screen, normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coolTeam > span {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.downInfo {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.downInfo > p {
+  color: #000;
+  font-size: 19px;
+  font-weight: 400;
+}
+.downInfo > h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achivements {
+  padding: 30px 60px;
+  background-color: #F5F5FA;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+}
+.achivements > span {
+  color: #323264;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.achivements__imges {
+  width: 100%;
+}
+.achivements .bigBoy {
+  display: none;
+}
+.achivements__imgArea {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .upInfo {
+    padding: 30px 60px;
+  }
+  .coolTeam {
+    height: 233px;
+  }
+  .coolTeam > span {
+    font-size: 46px;
+    letter-spacing: 63px;
+  }
+  .downInfo {
+    padding: 30px 60px;
+  }
+  .achivements {
+    padding: 30px 60px;
+  }
+  .achivements .bigBoy {
+    display: flex;
+  }
+  .achivements .smallBoy {
+    display: none;
+  }
+  .achivements__imges {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+  }
+  .achivements__imgArea {
+    height: 110px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .upInfo,
+  .downInfo {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 60px;
+  }
+  .coolTeam {
+    height: 312px;
+  }
+  .coolTeam > span {
+    font-size: 86px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .upInfo,
+  .downInfo {
+    padding: 30px 180px;
+  }
+  .coolTeam {
+    height: 438px;
+  }
+  .coolTeam > span {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .upInfo,
+  .downInfo {
+    padding: 30px 280px;
+  }
+  .coolTeam {
+    height: 584px;
+  }
+}/*# sourceMappingURL=about.css.map */
