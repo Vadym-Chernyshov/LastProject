@@ -18,13 +18,27 @@
   object-fit: cover;
   border-radius: 12px 12px 0 0;
  }
- & .linkWithArrow{
-  @include mixins.flex(flex-start,flex-start, 2px, row);
+ & .linkWithArrow {
+  @include mixins.flex(flex-start, flex-start, 2px, row);
   align-items: center;
-  margin-bottom: 5px;
+  cursor: pointer;
  }
- & .linkWithArrow--caps{
+
+ & .linkWithArrow:hover .linkWithArrow--caps {
+  color: vars.$accentColor;
+ }
+
+ & .linkWithArrow:hover svg path {
+  stroke: vars.$accentColor;
+ }
+
+ & .linkWithArrow--caps {
   @include mixins_fonts.regulationFont(14px, 700, vars.$activeColor_regular);
+  text-transform: uppercase;
+ }
+
+ & .linkWithArrow svg path {
+  stroke: #24A3FF;
  }
  &__workerCard__workerInfo{
   @include mixins.flex(flex-start,flex-start, 30px);

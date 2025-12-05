@@ -21,7 +21,7 @@ header {
   background: vars.$shadow;
  }
 
- & > .contacts__forPublication {
+ &>.contacts__forPublication {
   background-color: vars.$greyColor_bg;
  }
 
@@ -31,13 +31,25 @@ header {
   border-radius: 8px;
   background: transparent;
   border: none;
+  cursor: pointer;
   @include mixins_fonts.regulationFont(12px, 700);
  }
- & .contacts__forPublication .forPublicationHeader{
+ & .lnges__btn:hover{
+  background-color: rgba(255, 255, 255, 0.20);
+ }
+
+ & .contacts__forPublication .forPublicationHeader {
   color: vars.$greyColor_text;
+ }
+ & .contacts__forPublication .forPublicationHeader:hover {
+  background-color: vars.$greyColor_bg;
  }
 
  & .lnges__btn--active {
+  background: vars.$accentColor;
+  cursor: default;
+ }
+ & .lnges__btn--active:hover {
   background: vars.$accentColor;
  }
 
@@ -53,6 +65,7 @@ header {
 
  & .pinned__logo {
   @include mixins.flex(flex-start, flex-start, 5px, row);
+  align-items: center;
  }
 
  & .pinned__logo__assets {
@@ -63,7 +76,8 @@ header {
  & .pinned__logo__info {
   @include mixins_fonts.regulationFont(20px, 400);
  }
- & .pinned__logo__info__forPublication{
+
+ & .pinned__logo__info__forPublication {
   color: vars.$mainColor;
  }
 
@@ -91,6 +105,11 @@ header {
    align-items: center;
   }
 
+  &>.contacts .facebook:hover path {
+   fill: vars.$accentColor;
+   cursor: pointer;
+  }
+
   & .address__name {
    @include mixins_fonts.regulationFont(16px, 400, vars.$greyColor_text);
   }
@@ -111,9 +130,10 @@ header {
   & .pinned__logo__info {
    @include mixins_fonts.regulationFont(36px, 400);
   }
-   & .pinned__logo__info__forPublication{
-  color: vars.$mainColor;
- }
+
+  & .pinned__logo__info__forPublication {
+   color: vars.$mainColor;
+  }
 
   & .pinned__logo__brand {
    width: 130px;
@@ -128,11 +148,30 @@ header {
   & .sitenav>ul {
    @include mixins.flex(flex-start, flex-start, 15px, row);
   }
-   & .sitenav__cat>a.normalLink{
+
+  & .sitenav__cat > a.normalLink {
    color: vars.$activeColor_regular;
   }
-  & .sitenav__cat>a {
+
+  & .sitenav__cat > a {
    @include mixins_fonts.regulationFont(16px, 700);
+   padding-bottom: 2px;
+  }
+  & .sitenav__cat > a:hover {
+   border-bottom: 2px solid white;
+  }
+  & .sitenav__cat--whitePage > a{
+   color: vars.$activeColor_regular;
+  }
+  & .sitenav__cat--whitePage > a:hover {
+   border-bottom: 2px solid vars.$activeColor_regular;
+  }
+  & .sitenav__cat--active > a{
+   color: vars.$accentColor;
+   border-bottom: 2px solid vars.$accentColor;
+  }
+  & .sitenav__cat--active > a:hover{   
+   border-bottom: 2px solid vars.$accentColor;
   }
  }
 

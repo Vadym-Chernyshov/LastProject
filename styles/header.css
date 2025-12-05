@@ -32,14 +32,25 @@ header .lnges__btn {
   border-radius: 8px;
   background: transparent;
   border: none;
+  cursor: pointer;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
 }
+header .lnges__btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 header .contacts__forPublication .forPublicationHeader {
   color: #B3B3BA;
 }
+header .contacts__forPublication .forPublicationHeader:hover {
+  background-color: #F5F5FA;
+}
 header .lnges__btn--active {
+  background: #F0145A;
+  cursor: default;
+}
+header .lnges__btn--active:hover {
   background: #F0145A;
 }
 header .contacts__contact {
@@ -64,6 +75,7 @@ header .pinned__logo {
   align-content: flex-start;
   justify-content: flex-start;
   gap: 5px;
+  align-items: center;
 }
 header .pinned__logo__assets {
   display: flex;
@@ -107,6 +119,10 @@ header .pinned__button {
     padding: 0;
     background: none;
     align-items: center;
+  }
+  header > .contacts .facebook:hover path {
+    fill: #F0145A;
+    cursor: pointer;
   }
   header .address__name {
     color: #B3B3BA;
@@ -154,6 +170,23 @@ header .pinned__button {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
+    padding-bottom: 2px;
+  }
+  header .sitenav__cat > a:hover {
+    border-bottom: 2px solid white;
+  }
+  header .sitenav__cat--whitePage > a {
+    color: #24A3FF;
+  }
+  header .sitenav__cat--whitePage > a:hover {
+    border-bottom: 2px solid #24A3FF;
+  }
+  header .sitenav__cat--active > a {
+    color: #F0145A;
+    border-bottom: 2px solid #F0145A;
+  }
+  header .sitenav__cat--active > a:hover {
+    border-bottom: 2px solid #F0145A;
   }
 }
 @media screen and (min-width: 1024px) {

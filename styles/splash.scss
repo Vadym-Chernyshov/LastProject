@@ -2,37 +2,54 @@
 @use 'vars';
 @use 'mixins';
 
-.splash{
+.splash {
  height: 600px;
  width: 100%;
- @include mixins.flex(flex-start,space-between,30px);
+ @include mixins.flex(flex-start, space-between, 30px);
  position: relative;
  background-image: url(../img/background/h.svg);
  background-repeat: no-repeat;
  background-position: center;
- background-size: contain;
+ background-size: cover;
 
- &__arrowDown{
+ &__arrowDown {
   width: 42px;
   height: 42px;
   display: block;
   align-self: center;
+  cursor: pointer;
  }
- &__text{
+
+ &__arrowDown path,
+ &__arrowDown circle {
+  stroke: white;
+ }
+
+ &__arrowDown:hover path,
+ &__arrowDown:hover circle {
+  stroke: #F0145A;
+ }
+
+ &__text {
   padding: 0 30px;
   text-align: center;
   @include mixins_fonts.regulationFont(38px, 700);
  }
- @media screen and (min-width:768px){
+
+ @media screen and (min-width:768px) {
   height: 1024px;
  }
-  @media screen and (min-width:1024px){
+
+ @media screen and (min-width:1024px) {
+  background-size: contain;
   height: 768px;
  }
- @media screen and (min-width:1440px){
+
+ @media screen and (min-width:1440px) {
   height: 800px;
  }
- @media screen and (min-width:1920px){
+
+ @media screen and (min-width:1920px) {
   height: 1000px;
  }
 }

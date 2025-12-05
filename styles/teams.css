@@ -40,6 +40,16 @@
   align-content: flex-start;
   justify-content: space-between;
   gap: 15px;
+  cursor: pointer;
+}
+.teams__info:hover h4 {
+  color: #F0145A;
+}
+.teams__info svg path {
+  stroke: #24A3FF;
+}
+.teams__info:hover svg path {
+  stroke: #F0145A;
 }
 .teams__nameANDjobpos {
   display: flex;

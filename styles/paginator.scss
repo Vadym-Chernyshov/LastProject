@@ -1,3 +1,7 @@
+@use 'mixins_fonts';
+@use 'vars';
+@use 'mixins';
+
 .paginator{
  @include mixins.flex(center,center,15px, row);
  align-items: center;
@@ -7,8 +11,17 @@
   border-radius: 50%;
   background-color: vars.$activeColor_regular;
   opacity: 0.2;
+  cursor: pointer;
+ }
+ &__dot:hover{
+  opacity: 0.6;
  }
  &__dot--active{
   opacity: 1;
+  cursor: default;
  }
+ &__dot--active:hover{
+  opacity: 1;
+ }
+
 }

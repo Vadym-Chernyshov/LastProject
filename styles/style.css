@@ -46,13 +46,20 @@
   background-image: url(../img/background/h.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 .splash__arrowDown {
   width: 42px;
   height: 42px;
   display: block;
   align-self: center;
+  cursor: pointer;
+}
+.splash__arrowDown path, .splash__arrowDown circle {
+  stroke: white;
+}
+.splash__arrowDown:hover path, .splash__arrowDown:hover circle {
+  stroke: #F0145A;
 }
 .splash__text {
   padding: 0 30px;
@@ -68,6 +75,7 @@
 }
 @media screen and (min-width: 1024px) {
   .splash {
+    background-size: contain;
     height: 768px;
   }
 }
@@ -116,14 +124,25 @@ header .lnges__btn {
   border-radius: 8px;
   background: transparent;
   border: none;
+  cursor: pointer;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
 }
+header .lnges__btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 header .contacts__forPublication .forPublicationHeader {
   color: #B3B3BA;
 }
+header .contacts__forPublication .forPublicationHeader:hover {
+  background-color: #F5F5FA;
+}
 header .lnges__btn--active {
+  background: #F0145A;
+  cursor: default;
+}
+header .lnges__btn--active:hover {
   background: #F0145A;
 }
 header .contacts__contact {
@@ -148,6 +167,7 @@ header .pinned__logo {
   align-content: flex-start;
   justify-content: flex-start;
   gap: 5px;
+  align-items: center;
 }
 header .pinned__logo__assets {
   display: flex;
@@ -191,6 +211,10 @@ header .pinned__button {
     padding: 0;
     background: none;
     align-items: center;
+  }
+  header > .contacts .facebook:hover path {
+    fill: #F0145A;
+    cursor: pointer;
   }
   header .address__name {
     color: #B3B3BA;
@@ -238,6 +262,23 @@ header .pinned__button {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
+    padding-bottom: 2px;
+  }
+  header .sitenav__cat > a:hover {
+    border-bottom: 2px solid white;
+  }
+  header .sitenav__cat--whitePage > a {
+    color: #24A3FF;
+  }
+  header .sitenav__cat--whitePage > a:hover {
+    border-bottom: 2px solid #24A3FF;
+  }
+  header .sitenav__cat--active > a {
+    color: #F0145A;
+    border-bottom: 2px solid #F0145A;
+  }
+  header .sitenav__cat--active > a:hover {
+    border-bottom: 2px solid #F0145A;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -302,6 +343,10 @@ header .pinned__button {
   font-size: 30px;
   font-weight: 700;
   white-space: nowrap;
+  cursor: pointer;
+}
+.experience__navigation__element:hover {
+  color: #F0145A;
 }
 .experience__navigation__element--active {
   background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
@@ -317,7 +362,7 @@ header .pinned__button {
   /* по центру */
 }
 .experience h2 {
-  padding: 0 30px 30px 0;
+  padding: 0 30px 30px 30px;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
@@ -385,6 +430,15 @@ header .pinned__button {
   }
 }
 
+.card-link {
+  display: block;
+  /* щоб вів себе як блок */
+  text-decoration: none;
+  /* прибрати підкреслення */
+  color: inherit;
+  /* успадковувати колір тексту */
+}
+
 .services {
   padding: 0 30px;
   display: flex;
@@ -410,11 +464,22 @@ header .pinned__button {
   justify-content: flex-start;
   gap: 2px;
   align-items: center;
+  cursor: pointer;
+}
+.services .linkWithArrow:hover .linkWithArrow--caps {
+  color: #F0145A;
+}
+.services .linkWithArrow:hover svg path {
+  stroke: #F0145A;
 }
 .services .linkWithArrow--caps {
   color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+.services .linkWithArrow svg path {
+  stroke: #24A3FF;
 }
 .services__beginInfo > h1 {
   color: #24A3FF;
@@ -502,8 +567,16 @@ header .pinned__button {
   border-radius: 50%;
   background-color: #24A3FF;
   opacity: 0.2;
+  cursor: pointer;
+}
+.paginator__dot:hover {
+  opacity: 0.6;
 }
 .paginator__dot--active {
+  opacity: 1;
+  cursor: default;
+}
+.paginator__dot--active:hover {
   opacity: 1;
 }
 
@@ -541,12 +614,22 @@ header .pinned__button {
   justify-content: flex-start;
   gap: 2px;
   align-items: center;
-  margin-bottom: 5px;
+  cursor: pointer;
+}
+.team .linkWithArrow:hover .linkWithArrow--caps {
+  color: #F0145A;
+}
+.team .linkWithArrow:hover svg path {
+  stroke: #F0145A;
 }
 .team .linkWithArrow--caps {
   color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+.team .linkWithArrow svg path {
+  stroke: #24A3FF;
 }
 .team__workerCard__workerInfo {
   display: flex;
@@ -726,6 +809,7 @@ header .pinned__button {
   border-radius: 12px;
   background: #24A3FF;
   box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+  cursor: pointer;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -735,7 +819,7 @@ header .pinned__button {
   align-self: center;
   display: flex;
   border-radius: 12px;
-  background: #E6E6F0;
+  background-color: #E6E6F0;
 }
 .publications__categories > button {
   display: flex;
@@ -744,10 +828,16 @@ header .pinned__button {
   gap: 10px;
   border-radius: 10px;
   margin: 2px;
-  background: #E6E6F0;
+  background-color: #E6E6F0;
+  cursor: pointer;
 }
 .publications__categories > button.active {
   background-color: #FFFFFF;
+  cursor: default;
+  pointer-events: none;
+}
+.publications__categories > button:hover {
+  background-color: #F5F5FA;
 }
 .publications .linkWithArrow {
   display: flex;
@@ -757,12 +847,22 @@ header .pinned__button {
   justify-content: flex-start;
   gap: 2px;
   align-items: center;
-  margin-bottom: 5px;
+  cursor: pointer;
+}
+.publications .linkWithArrow:hover .linkWithArrow--caps {
+  color: #F0145A;
+}
+.publications .linkWithArrow:hover svg path {
+  stroke: #F0145A;
 }
 .publications .linkWithArrow--caps {
   color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+.publications .linkWithArrow svg path {
+  stroke: #24A3FF;
 }
 .publications > h1 {
   color: #fff;
@@ -849,9 +949,10 @@ header .pinned__button {
     grid-column: 3;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1920px) {
+@media screen and (min-width: 1920px) {
   .publications {
     padding: 30px 160px;
+    margin-top: 30px;
   }
 }
 
@@ -912,6 +1013,12 @@ footer .contact {
   gap: 10px;
   align-items: center;
 }
+footer .contact__icon {
+  cursor: pointer;
+}
+footer .contact__icon:hover path {
+  fill: #F0145A;
+}
 footer .contact__phone {
   color: #46466E;
   font-size: 16px;
@@ -921,6 +1028,9 @@ footer .contact__email {
   color: #24A3FF;
   font-size: 16px;
   font-weight: 700;
+}
+footer .contact__email:hover {
+  color: #F0145A;
 }
 footer .end {
   color: #B3B3BA;

@@ -2,69 +2,103 @@
 @use 'vars';
 @use 'mixins';
 
-.services{
- padding: 0 30px;
- @include mixins.flex(flex-start,flex-start,30px);
+.card-link {
+ display: block;
+ /* щоб вів себе як блок */
+ text-decoration: none;
+ /* прибрати підкреслення */
+ color: inherit;
+ /* успадковувати колір тексту */
+}
 
- &__beginInfo{
-  @include mixins.flex(flex-start,flex-start,10px);
+.services {
+ padding: 0 30px;
+ @include mixins.flex(flex-start, flex-start, 30px);
+
+ &__beginInfo {
+  @include mixins.flex(flex-start, flex-start, 10px);
  }
- & .linkWithArrow{
-  @include mixins.flex(flex-start,flex-start, 2px, row);
+
+ & .linkWithArrow {
+  @include mixins.flex(flex-start, flex-start, 2px, row);
   align-items: center;
+  cursor: pointer;
  }
- & .linkWithArrow--caps{
+
+ & .linkWithArrow:hover .linkWithArrow--caps {
+  color: vars.$accentColor;
+ }
+
+ & .linkWithArrow:hover svg path {
+  stroke: vars.$accentColor;
+ }
+
+ & .linkWithArrow--caps {
   @include mixins_fonts.regulationFont(14px, 700, vars.$activeColor_regular);
+  text-transform: uppercase;
  }
- &__beginInfo > h1{
+
+ & .linkWithArrow svg path {
+  stroke: #24A3FF;
+ }
+
+ &__beginInfo>h1 {
   @include mixins_fonts.regulationFont(30px, 700, vars.$activeColor_regular);
-  background: vars.$gradient_redtext;  
+  background: vars.$gradient_redtext;
   -webkit-background-clip: text;
   color: transparent;
  }
 
- &__cards{
-  @include mixins.flex(flex-start,flex-start,30px);
+ &__cards {
+  @include mixins.flex(flex-start, flex-start, 30px);
  }
- &__card{
-  @include mixins.flex(flex-start,flex-start,15px);
+
+ &__card {
+  @include mixins.flex(flex-start, flex-start, 15px);
   align-items: flex-start;
  }
 
- &__card .icons_area{
+ &__card .icons_area {
   padding: 14px;
   border-radius: 24px;
  }
- &__card .icons__area__problem{
+
+ &__card .icons__area__problem {
   padding: 23px;
   border-radius: 24px;
  }
- &__card .activeColor_regular{
+
+ &__card .activeColor_regular {
   @include mixins_fonts.regulationFont(22px, 700, vars.$activeColor_regular);
  }
- &__card p{
+
+ &__card p {
   @include mixins_fonts.regulationFont(16px, 400);
  }
 
- @media screen and (min-width:768px){
+ @media screen and (min-width:768px) {
   padding: 0 60px;
-  &__cards{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 60px;
+
+  &__cards {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-gap: 60px;
   }
  }
- @media screen and (min-width:1024px){
+
+ @media screen and (min-width:1024px) {
   padding: 0 60px;
-  &__cards{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 60px;
+
+  &__cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 60px;
   }
  }
- @media screen and (min-width:1920px){
+
+ @media screen and (min-width:1920px) {
   padding: 0 160px;
  }
 }

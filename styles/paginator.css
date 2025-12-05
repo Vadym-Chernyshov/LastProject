@@ -1,0 +1,27 @@
+.paginator {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+.paginator__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #24A3FF;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.paginator__dot:hover {
+  opacity: 0.6;
+}
+.paginator__dot--active {
+  opacity: 1;
+  cursor: default;
+}
+.paginator__dot--active:hover {
+  opacity: 1;
+}/*# sourceMappingURL=paginator.css.map */

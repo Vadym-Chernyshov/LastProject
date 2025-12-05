@@ -47,11 +47,20 @@ footer{
   @include mixins.flex(flex-start,flex-start,10px);
   align-items: center;
  }
+ & .contact__icon{
+  cursor: pointer;
+ }
+ & .contact__icon:hover path{
+  fill: vars.$accentColor;
+ }
  & .contact__phone{
   @include mixins_fonts.regulationFont(16px, 700, vars.$mainColor_alt);
  }
  & .contact__email{
   @include mixins_fonts.regulationFont(16px, 700, vars.$activeColor_regular);
+ }
+ & .contact__email:hover{
+  color: vars.$accentColor;
  }
  .end{
   @include mixins_fonts.regulationFont(16px, 400, vars.$greyColor_text);

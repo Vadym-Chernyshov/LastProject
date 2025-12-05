@@ -1,3 +1,13 @@
+@charset "UTF-8";
+.card-link {
+  display: block;
+  /* щоб вів себе як блок */
+  text-decoration: none;
+  /* прибрати підкреслення */
+  color: inherit;
+  /* успадковувати колір тексту */
+}
+
 .services {
   padding: 0 30px;
   display: flex;
@@ -23,11 +33,22 @@
   justify-content: flex-start;
   gap: 2px;
   align-items: center;
+  cursor: pointer;
+}
+.services .linkWithArrow:hover .linkWithArrow--caps {
+  color: #F0145A;
+}
+.services .linkWithArrow:hover svg path {
+  stroke: #F0145A;
 }
 .services .linkWithArrow--caps {
   color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+.services .linkWithArrow svg path {
+  stroke: #24A3FF;
 }
 .services__beginInfo > h1 {
   color: #24A3FF;

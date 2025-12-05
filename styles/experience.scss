@@ -22,6 +22,10 @@
   &__navigation__element {
     @include mixins_fonts.regulationFont(30px, 700, vars.$greyColor_text);
     white-space: nowrap;
+    cursor: pointer;
+  }
+  &__navigation__element:hover{
+    color: vars.$accentColor;
   }
 
   &__navigation__element--active {
@@ -40,7 +44,7 @@
   }
 
   & h2 {
-    padding: 0 30px 30px 0;
+    padding: 0 30px 30px 30px;
     @include mixins_fonts.regulationFont(20px, 700);
   }
 

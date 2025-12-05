@@ -24,6 +24,16 @@
  }
  &__info{
   @include mixins.flex(flex-start, space-between, 15px, row);
+  cursor: pointer;
+ }
+ &__info:hover h4{
+  color: vars.$accentColor;
+ }
+ &__info svg path{
+  stroke: #24A3FF;
+ }
+ &__info:hover svg path{
+  stroke: vars.$accentColor;
  }
  &__nameANDjobpos{
   @include mixins.flex(flex-start, flex-start, 5px);

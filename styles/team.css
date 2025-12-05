@@ -32,12 +32,22 @@
   justify-content: flex-start;
   gap: 2px;
   align-items: center;
-  margin-bottom: 5px;
+  cursor: pointer;
+}
+.team .linkWithArrow:hover .linkWithArrow--caps {
+  color: #F0145A;
+}
+.team .linkWithArrow:hover svg path {
+  stroke: #F0145A;
 }
 .team .linkWithArrow--caps {
   color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+.team .linkWithArrow svg path {
+  stroke: #24A3FF;
 }
 .team__workerCard__workerInfo {
   display: flex;

@@ -14,6 +14,7 @@
   border-radius: 12px;
   background: #24A3FF;
   box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+  cursor: pointer;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -23,7 +24,7 @@
   align-self: center;
   display: flex;
   border-radius: 12px;
-  background: #E6E6F0;
+  background-color: #E6E6F0;
 }
 .publications__categories > button {
   display: flex;
@@ -32,10 +33,16 @@
   gap: 10px;
   border-radius: 10px;
   margin: 2px;
-  background: #E6E6F0;
+  background-color: #E6E6F0;
+  cursor: pointer;
 }
 .publications__categories > button.active {
   background-color: #FFFFFF;
+  cursor: default;
+  pointer-events: none;
+}
+.publications__categories > button:hover {
+  background-color: #F5F5FA;
 }
 .publications .linkWithArrow {
   display: flex;
@@ -45,12 +52,22 @@
   justify-content: flex-start;
   gap: 2px;
   align-items: center;
-  margin-bottom: 5px;
+  cursor: pointer;
+}
+.publications .linkWithArrow:hover .linkWithArrow--caps {
+  color: #F0145A;
+}
+.publications .linkWithArrow:hover svg path {
+  stroke: #F0145A;
 }
 .publications .linkWithArrow--caps {
   color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+.publications .linkWithArrow svg path {
+  stroke: #24A3FF;
 }
 .publications > h1 {
   color: #fff;
@@ -137,8 +154,9 @@
     grid-column: 3;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1920px) {
+@media screen and (min-width: 1920px) {
   .publications {
     padding: 30px 160px;
+    margin-top: 30px;
   }
 }/*# sourceMappingURL=publications.css.map */
