@@ -187,8 +187,14 @@ header .pinned__logo__info__forPublication {
   color: #323264;
 }
 header .pinned__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: none;
+}
+header .pinned__button:hover svg path {
+  fill: #E6E6F0;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -349,6 +355,11 @@ header .pinned__button {
   color: #F0145A;
 }
 .experience__navigation__element--active {
+  background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.experience__navigation__element--active:hover {
   background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   color: transparent;
@@ -815,6 +826,12 @@ header .pinned__button {
   font-weight: 700;
   text-align: center;
 }
+.publications__moreBTN:hover {
+  background: #0085FF;
+}
+.publications__moreBTN:active {
+  background: #006CCF;
+}
 .publications__categories {
   align-self: center;
   display: flex;
@@ -889,6 +906,10 @@ header .pinned__button {
   justify-content: flex-start;
   gap: 0px;
   background-color: #FFFFFF;
+  cursor: pointer;
+}
+.publications__card:hover .publications__name {
+  color: #F0145A;
 }
 .publications__img {
   width: 100%;

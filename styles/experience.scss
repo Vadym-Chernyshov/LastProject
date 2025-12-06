@@ -33,6 +33,11 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+  &__navigation__element--active:hover {
+    background: vars.$gradient_redtext;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
   &__line {
     width: calc(100% - 60px);

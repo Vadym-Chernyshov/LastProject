@@ -20,6 +20,12 @@
   font-weight: 700;
   text-align: center;
 }
+.publications__moreBTN:hover {
+  background: #0085FF;
+}
+.publications__moreBTN:active {
+  background: #006CCF;
+}
 .publications__categories {
   align-self: center;
   display: flex;
@@ -94,6 +100,10 @@
   justify-content: flex-start;
   gap: 0px;
   background-color: #FFFFFF;
+  cursor: pointer;
+}
+.publications__card:hover .publications__name {
+  color: #F0145A;
 }
 .publications__img {
   width: 100%;

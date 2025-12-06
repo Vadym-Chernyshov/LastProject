@@ -18,6 +18,12 @@
     @include mixins_fonts.regulationFont(16px, 700);
     text-align: center;
   }
+  &__moreBTN:hover {
+    background: vars.$activeColor_hover;
+  }
+  &__moreBTN:active {
+    background: vars.$activeColor_active;
+  }
 
   &__categories {
     align-self: center;
@@ -85,6 +91,10 @@
   &__card {
     @include mixins.flex(flex-start, flex-start, 0px);
     background-color: #FFFFFF;
+    cursor: pointer;
+  }
+  &__card:hover &__name{
+    color:vars.$accentColor;
   }
 
   &__img {

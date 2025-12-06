@@ -82,9 +82,17 @@ header {
  }
 
  & .pinned__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: none;
  }
+  & .pinned__button:hover svg path{
+  fill: vars.$greyColor_separator;
+ }
+
+
 
  @media screen and (min-width:768px) {
   padding: 50px 60px 30px 60px;
