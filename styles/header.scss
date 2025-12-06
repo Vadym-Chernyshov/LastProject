@@ -34,13 +34,15 @@ header {
   cursor: pointer;
   @include mixins_fonts.regulationFont(12px, 700);
  }
- & .lnges__btn:hover{
+
+ & .lnges__btn:hover {
   background-color: rgba(255, 255, 255, 0.20);
  }
 
  & .contacts__forPublication .forPublicationHeader {
   color: vars.$greyColor_text;
  }
+
  & .contacts__forPublication .forPublicationHeader:hover {
   background-color: vars.$greyColor_bg;
  }
@@ -49,6 +51,7 @@ header {
   background: vars.$accentColor;
   cursor: default;
  }
+
  & .lnges__btn--active:hover {
   background: vars.$accentColor;
  }
@@ -88,8 +91,13 @@ header {
   background: transparent;
   border: none;
  }
-  & .pinned__button:hover svg path{
+
+ & .pinned__button:hover svg rect {
   fill: vars.$greyColor_separator;
+ }
+
+ & .pinned__button--red:hover svg rect {
+  fill: vars.$accentColor;
  }
 
 
@@ -157,28 +165,33 @@ header {
    @include mixins.flex(flex-start, flex-start, 15px, row);
   }
 
-  & .sitenav__cat > a.normalLink {
+  & .sitenav__cat>a.normalLink {
    color: vars.$activeColor_regular;
   }
 
-  & .sitenav__cat > a {
+  & .sitenav__cat>a {
    @include mixins_fonts.regulationFont(16px, 700);
    padding-bottom: 2px;
   }
-  & .sitenav__cat > a:hover {
+
+  & .sitenav__cat>a:hover {
    border-bottom: 2px solid white;
   }
-  & .sitenav__cat--whitePage > a{
+
+  & .sitenav__cat--whitePage>a {
    color: vars.$activeColor_regular;
   }
-  & .sitenav__cat--whitePage > a:hover {
+
+  & .sitenav__cat--whitePage>a:hover {
    border-bottom: 2px solid vars.$activeColor_regular;
   }
-  & .sitenav__cat--active > a{
+
+  & .sitenav__cat--active>a {
    color: vars.$accentColor;
    border-bottom: 2px solid vars.$accentColor;
   }
-  & .sitenav__cat--active > a:hover{   
+
+  & .sitenav__cat--active>a:hover {
    border-bottom: 2px solid vars.$accentColor;
   }
  }
